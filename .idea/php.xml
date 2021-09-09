@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$/src/vendor/composer" />
+      <path value="$PROJECT_DIR$/src/vendor/czproject/git-php" />
+      <path value="$PROJECT_DIR$/src/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/src/vendor/mindplay/annotations" />
+      <path value="$PROJECT_DIR$/src/vendor/phpmv/php-mv-ui" />
+      <path value="$PROJECT_DIR$/src/vendor/prismjs/prism" />
+      <path value="$PROJECT_DIR$/src/vendor/phpmv/ubiquity-annotations" />
+      <path value="$PROJECT_DIR$/src/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/src/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/src/vendor/phpmv/ubiquity-debug" />
+      <path value="$PROJECT_DIR$/src/vendor/frameworks/jquery" />
+      <path value="$PROJECT_DIR$/src/vendor/phpmv/ubiquity-webtools" />
+      <path value="$PROJECT_DIR$/src/vendor/phpmv/ubiquity-dev" />
+      <path value="$PROJECT_DIR$/src/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/src/vendor/phpmv/ubiquity" />
+      <path value="$PROJECT_DIR$/src/vendor/symfony/polyfill-ctype" />
+    </include_path>
+  </component>
+  <component name="PhpProjectSharedConfiguration" php_language_level="7.4" />
+  <component name="PhpUnit">
+    <phpunit_settings>
+      <PhpUnitSettings custom_loader_path="$PROJECT_DIR$/src/vendor/autoload.php" />
+    </phpunit_settings>
+  </component>
+</project>
