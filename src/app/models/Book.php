@@ -29,9 +29,10 @@ class Book{
 	private $image;
 
 	/**
-	 * @column("name"=>"category","nullable"=>true,"dbType"=>"int(11)")
-	 * @manyToOne()
-	 * @joinColumn("className"=>"models\\Category","name"=>"category")
+	 * @column("name"=>"category","dbType"=>"int(11)")
+	 * @validator("type"=>"notNull")
+     * @manyToOne
+     * @joinColumn("className"=>"models\\Category","name"=>"id","nullable"=>false)
 	 */
 	private $category;
 
@@ -87,7 +88,7 @@ class Book{
 
 
 	 public function __toString(){
-		return ($this->title??'no value').'';
+		return ($this->category??'no value').'';
 	}
 
 }
