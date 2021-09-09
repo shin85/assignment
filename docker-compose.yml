@@ -11,6 +11,8 @@ services:
       - ./src:/var/www/html
     ports:
       - 80:80
+    depends_on:
+      - db
   db:
     image: mysql:5.7
     command: mysqld --sql-mode=NO_ENGINE_SUBSTITUTION --disable-partition-engine-check --explicit_defaults_for_timestamp --skip-name-resolve
