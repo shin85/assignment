@@ -4,7 +4,7 @@ return array(
 		"database"=>[
 				"type"=>"mysql",
 				"dbName"=>"malaga",
-				"serverName"=>"192.168.1.88",
+				"serverName"=>"db",
 				"port"=>"3306",
 				"user"=>"root",
 				"password"=>"toomba",

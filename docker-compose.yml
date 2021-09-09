@@ -11,3 +11,14 @@ services:
       - ./src:/var/www/html
     ports:
       - 80:80
+  db:
+    image: mysql:5.7
+    command: mysqld --sql-mode=NO_ENGINE_SUBSTITUTION --disable-partition-engine-check --explicit_defaults_for_timestamp --skip-name-resolve
+    restart: always
+    environment:
+      # MySQL environment variables
+      MYSQL_DATABASE: malaga
+      MYSQL_ROOT_PASSWORD: toomba
+      TZ: Europe/Amsterdam
+    ports:
+      - 3306:3306
