@@ -22,16 +22,6 @@ class Category{
 	 */
 	private $des;
 
-	/**
-	 * @oneToMany("mappedBy"=>"category","className"=>"models\\Book")
-	 */
-	private $books;
-
-
-	 public function __construct(){
-		$this->books = [];
-	}
-
 
 	public function getId(){
 		return $this->id;
@@ -60,22 +50,6 @@ class Category{
 
 	public function setDes($des){
 		$this->des=$des;
-	}
-
-
-	public function getBooks(){
-		return $this->books;
-	}
-
-
-	public function setBooks($books){
-		$this->books=$books;
-	}
-
-
-	 public function addToBooks($book){
-		$this->books[]=$book;
-		$book->setCategory($this);
 	}
 
 

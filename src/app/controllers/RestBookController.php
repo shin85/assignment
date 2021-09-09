@@ -36,7 +36,7 @@ class RestBookController extends \Ubiquity\controllers\rest\RestResourceControll
 	* @get("{keyValues}", "priority"=> -1)
 	*/
 	public function one($keyValues) {
-		$this->_getOne ( $keyValues, $this->getRequestParam ( 'include', false ) );
+		$this->_getOne ( $keyValues, $this->getRequestParam ( 'include', false ));
 	}
 
 	/**
