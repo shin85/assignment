@@ -23,4 +23,9 @@ edit config connect database
 				"cache"=>false
 		],
 ```
+
+## FE test
+```text
+http://localhost/fe.php
+```
 P/s: when run on production please remove `src/app/controllers/Admin.php`
