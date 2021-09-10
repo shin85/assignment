@@ -31,8 +31,6 @@ class Book{
 	/**
 	 * @column("name"=>"category","dbType"=>"int(11)")
 	 * @validator("type"=>"notNull")
-     * @manyToOne
-     * @joinColumn("className"=>"models\\Category","name"=>"id","nullable"=>false)
 	 */
 	private $category;
 

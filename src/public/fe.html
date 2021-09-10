@@ -1,0 +1,33 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="/assets/css/datatables.min.css">
+    <script src="/assets/js/jquery-3.5.1.js"></script>
+    <script src="/assets/js/datatables.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#example').DataTable( {
+                ajax: '/books',
+                columns:[
+                    {"data":"title"},
+                    {"data":"des"},
+                    {"data":null}
+                ],
+                "columnDefs": [{ "targets": -1, "data": null, "defaultContent": "<button id='edit'>Edit</button> <button id='delete'>Delete</button>"}]
+            } );
+        } );
+    </script>
+</head>
+<body>
+<div>
+<table id="example" class="display" style="width:100%">
+    <thead>
+    <tr>
+        <th>title</th>
+        <th>des</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+</table>
+</div>
+</body>
+</html>

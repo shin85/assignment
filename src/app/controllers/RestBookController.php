@@ -2,14 +2,39 @@
 namespace controllers;
 
 
+use Ubiquity\controllers\rest\formatters\ResponseFormatter;
+use Ubiquity\orm\OrmUtils;
 
+class MyResponseFormatter extends ResponseFormatter {
+
+    public function cleanRestObject($o, &$classname = null) {
+//        $pk = OrmUtils::getFirstKeyValue ( $o );
+        $r=parent::cleanRestObject($o);
+//        $r["category_link"] = ["id"=>"/categories/".$pk];
+        return $r;
+    }
+
+    public function getOne($datas) {
+        return $this->format ( $this->cleanRestObject ( $datas ) );
+    }
+
+    public function get($datas, $pages = null) {
+        $datas = $this->getDatas ( $datas );
+        return $this->format ( [ "data" => $datas,"count" => \sizeof ( $datas ) ] );
+    }
+}
 /**
  * @rest("resource"=>"models\\Book")
  */
 /**
  * @route("path"=>"/books/","inherited"=>false,"automated"=>false,"requirements"=>[],"priority"=>0)
  */
+
 class RestBookController extends \Ubiquity\controllers\rest\RestResourceController {
+
+    protected function getResponseFormatter(): ResponseFormatter {
+        return new MyResponseFormatter();
+    }
 
 	/**
 	 * Returns all links for this controller.

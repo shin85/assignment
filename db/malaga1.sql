@@ -23,13 +23,13 @@ DROP TABLE IF EXISTS `book`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `book` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `title` varchar(100) NOT NULL,
-  `des` text,
-  `image` varchar(255) DEFAULT NULL,
-  `category` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+                        `id` int(11) NOT NULL AUTO_INCREMENT,
+                        `title` varchar(100) NOT NULL,
+                        `des` text,
+                        `image` varchar(255) DEFAULT NULL,
+                        `category` int(11) NOT NULL,
+                        PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -38,7 +38,7 @@ CREATE TABLE `book` (
 
 LOCK TABLES `book` WRITE;
 /*!40000 ALTER TABLE `book` DISABLE KEYS */;
-INSERT INTO `book` VALUES (2,'sjkahdkfasjhdf','skjahfkasjhdf',NULL,1),(3,'asdfasjhdf98','123123',NULL,1),(4,'1232abc','123abc',NULL,2),(5,'1232abc','123abc',NULL,2),(6,'1232abc','123abc',NULL,2),(8,'test with postman','test with postman',NULL,1);
+INSERT INTO `book` VALUES (3,'asdfasjhdf98','123123',NULL,1),(6,'1232abc','123abc',NULL,2),(8,'test with postman','test with postman',NULL,1),(9,'test with postman','test with postman',NULL,1),(10,'asdfasdf','asdfasdfasdfsadf',NULL,1),(11,'test 123','test 123',NULL,1),(12,'abc123','abc123\n',NULL,1);
 /*!40000 ALTER TABLE `book` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -50,10 +50,10 @@ DROP TABLE IF EXISTS `category`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `category` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(100) NOT NULL,
-  `des` text,
-  PRIMARY KEY (`id`)
+                            `id` int(11) NOT NULL AUTO_INCREMENT,
+                            `name` varchar(100) NOT NULL,
+                            `des` text,
+                            PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -63,7 +63,7 @@ CREATE TABLE `category` (
 
 LOCK TABLES `category` WRITE;
 /*!40000 ALTER TABLE `category` DISABLE KEYS */;
-INSERT INTO `category` VALUES (1,'change name by postmane','test'),(2,'commic','1sadf');
+INSERT INTO `category` VALUES (1,'Novel','test'),(2,'commic','1sadf');
 /*!40000 ALTER TABLE `category` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -75,14 +75,14 @@ DROP TABLE IF EXISTS `user`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `user` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `firstname` varchar(65) NOT NULL,
-  `lastname` varchar(65) NOT NULL,
-  `email` varchar(255) NOT NULL,
-  `password` varchar(255) DEFAULT NULL,
-  `suspended` tinyint(1) DEFAULT '0',
-  `idOrganization` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
+                        `id` int(11) NOT NULL AUTO_INCREMENT,
+                        `firstname` varchar(65) NOT NULL,
+                        `lastname` varchar(65) NOT NULL,
+                        `email` varchar(255) NOT NULL,
+                        `password` varchar(255) DEFAULT NULL,
+                        `suspended` tinyint(1) DEFAULT '0',
+                        `idOrganization` int(11) NOT NULL,
+                        PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=103 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -109,4 +109,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-09-09 19:38:42
+-- Dump completed on 2021-09-10 14:15:46
